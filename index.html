@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Love Calculator abc</title>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+    <link rel="stylesheet" href="styles.css">  
+  </head>
+  <body>
+    <div style="height: 90vh" class="d-flex mt-4 justify-content-center align-items-center">
+    <div class="container">
+
+      <h1 class="display-1 text-danger mb-4">Love Calculator</h1>    
+
+      <div id="yourNameError" class="text-danger mb-2"></div>
+      <div id="partnerNameError" class="text-danger mb-2"></div>
+
+      <form class="mb-4 d-flex">
+        <div class="form-group" style="width: 45%">
+          <input type="text" id="yourName" class="form-control" placeholder="Your Name">        
+        </div>
+        <div style="width: 10%"><span class="px-4"> + </span></div>
+        <div class="form-group" style="width: 45%">
+          <input type="text" id="partnerName" class="form-control" placeholder="Partner Name">        
+        </div>
+      </form>
+
+      <div class="text-danger text-center display-4" id="res">Your Love Percentage</div>
+
+        <div class="text-danger text-center" style="font-size: 20px" id="wishes">God Bless Your Relationship</div>    
+      <div class="mt-4 text-center">
+          <button onclick="clearForm()" class="btn btn-secondary">Clear Form</button>
+          <button onclick="lovePercent()" class="btn btn-danger">Calculate</button>
+      </div>    
+    </div>
+  </div>
+    <script src="custom.js"></script>
+  </body>
+  </html>
