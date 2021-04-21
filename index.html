@@ -1,40 +1,50 @@
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Love Calculator abc</title>  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
-    <link rel="stylesheet" href="styles.css">  
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript: Love Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div style="height: 90vh" class="d-flex mt-4 justify-content-center align-items-center">
+    <div class="wrapper">
     <div class="container">
 
-      <h1 class="display-1 text-danger mb-4">Love Calculator</h1>    
+      <h1 class="display-3 text-danger">Love Calculator</h1>
+      <p class="lead">Fill the name fields and calculate the Love Percentage 🙂!</p>
 
-      <div id="yourNameError" class="text-danger mb-2"></div>
-      <div id="partnerNameError" class="text-danger mb-2"></div>
-
-      <form class="mb-4 d-flex">
-        <div class="form-group" style="width: 45%">
-          <input type="text" id="yourName" class="form-control" placeholder="Your Name">        
+      <form class="mb-4 d-flex mt-4">
+        <div class="form-group col-sm-5">
+          <input type="text" id="yourName" class="form-control" placeholder="Your Name">
+          <div class="text-danger mb-2 yourNameError"></div>
         </div>
-        <div style="width: 10%"><span class="px-4"> + </span></div>
-        <div class="form-group" style="width: 45%">
+        <div class="col-sm-2 text-center align-items-center"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+        <div class="form-group col-sm-5">
           <input type="text" id="partnerName" class="form-control" placeholder="Partner Name">        
+          <div class="text-danger mb-2 partnerNameError"></div>
         </div>
       </form>
 
-      <div class="text-danger text-center display-4" id="res">Your Love Percentage</div>
-
-        <div class="text-danger text-center" style="font-size: 20px" id="wishes">God Bless Your Relationship</div>    
+      <div class="text-danger text-center display-4 result">Your Love Percentage</div>
+        <div class="text-danger text-center wishes">God Bless Your Relationship</div>    
       <div class="mt-4 text-center">
-          <button onclick="clearForm()" class="btn btn-secondary">Clear Form</button>
-          <button onclick="lovePercent()" class="btn btn-danger">Calculate</button>
+          <button class="btn btn-secondary btnClearForm">Clear Form</button>
+          <button class="btn btn-danger btnLovePercent">Calculate</button>
       </div>    
     </div>
   </div>
-    <script src="custom.js"></script>
+    <script src="script.js"></script>
   </body>
   </html>
